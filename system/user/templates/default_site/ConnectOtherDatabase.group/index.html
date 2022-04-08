@@ -1,0 +1,11 @@
+<?php
+include("include/dbinfo");
+$comm = @mysql_connect('localhost', 'root', '', 'seminar');
+$rs = @mysql_select_db($database) or die("Unable to select database");
+
+$sql = "SELECT * FROM tbl_states";
+$result = mysql_query($sql) or die("SELECT Error: " . mysql_error());
+$num_rows = mysql_num_rows($result);
+?>
+
+$DB1 = $this->EE->load->database('ext_db', TRUE);
